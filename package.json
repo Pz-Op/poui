@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/mingcute": "^1.1.9",
     "components": "file:packages\\components",
-    "poui_styles": "file:packages/styles",
+    "poui_styles": "file:packages\\styles",
     "sass": "^1.66.1",
     "vue": "^3.3.4"
   },
