@@ -12,18 +12,19 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "components": "file:packages/components",
+    "@iconify-json/mingcute": "^1.1.9",
+    "components": "file:packages\\components",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",
-    "@tsconfig/node18": "^18.2.0",
-    "@types/node": "^18.17.5",
+    "@tsconfig/node18": "^18.2.1",
+    "@types/node": "^18.17.8",
     "@unocss/eslint-config": "^0.55.2",
     "@unocss/transformer-compile-class": "^0.55.2",
     "@unocss/transformer-directives": "^0.55.2",
     "@unocss/transformer-variant-group": "^0.55.2",
-    "@vitejs/plugin-vue": "^4.3.1",
+    "@vitejs/plugin-vue": "^4.3.3",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.47.0",
