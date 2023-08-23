@@ -2,6 +2,8 @@ import type { Component, App } from 'vue';
 
 import Button from './button';
 
+import 'virtual:uno.css'
+
 const components: {
   [propName: string]: Component;
 } = {

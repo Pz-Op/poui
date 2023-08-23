@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import TheWelcome from "./components/TheWelcome.vue";
 </script>
 
 <template>
@@ -9,7 +9,12 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <Button>1255</Button>
+      <div class="flex gap-4 mt-4">
+        <Button class="po_button-primary">1255</Button>
+        <Button class="po_button-second">1255</Button>
+        <Button class="po_button-outline">1255</Button>
+        <Button class="po_button-text">1255</Button>
+      </div>
     </div>
   </header>
 
