@@ -22,6 +22,7 @@ import TheWelcome from './components/TheWelcome.vue'
         <Button class="po_button-text">
           1255
         </Button>
+
         <Ripple />
       </div>
     </div>
