@@ -7,24 +7,44 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "components": "file:packages/components",
+    "@iconify-json/mingcute": "^1.1.9",
+    "components": "file:packages\\components",
     "poui_styles": "file:packages/styles",
     "sass": "^1.66.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.0",
-    "@types/node": "^18.17.5",
-    "@vitejs/plugin-vue": "^4.3.1",
+    "@antfu/eslint-config": "^0.40.2",
+    "@tsconfig/node18": "^18.2.1",
+    "@types/node": "^18.17.8",
+    "@unocss/eslint-config": "^0.55.2",
+    "@unocss/transformer-compile-class": "^0.55.2",
+    "@unocss/transformer-directives": "^0.55.2",
+    "@unocss/transformer-variant-group": "^0.55.2",
+    "@vitejs/plugin-vue": "^4.3.3",
     "@vitejs/plugin-vue-jsx": "^3.0.2",
     "@vue/tsconfig": "^0.4.0",
+    "eslint": "^8.47.0",
+    "lint-staged": "^14.0.1",
     "npm-run-all": "^4.1.5",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "~5.1.6",
     "unocss": "^0.55.2",
     "vite": "^4.4.9",
     "vue-tsc": "^1.8.8"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "volta": {
+    "node": "18.17.1"
   }
 }

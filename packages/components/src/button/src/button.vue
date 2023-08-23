@@ -1,9 +1,11 @@
+<script setup></script>
+
 <template>
   <button class="po_button">
-    <slot></slot>
+    <slot />
   </button>
 </template>
-<script setup></script>
+
 <style scoped lang="scss">
 .po_button {
   --pri-color: 96, 165, 250;
