@@ -1,13 +1,13 @@
 import type { App, Component } from 'vue'
 
 import Button from './button'
-
-import 'virtual:uno.css'
+import Ripple from './animations'
 
 const components: {
   [propName: string]: Component
 } = {
   Button,
+  Ripple,
 }
 export const UiComponents = components
 // 全局注册
