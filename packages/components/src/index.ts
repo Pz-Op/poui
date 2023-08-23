@@ -1,18 +1,17 @@
-import type { Component, App } from 'vue';
+import type { App, Component } from 'vue'
 
-import Button from './button';
+import Button from './button'
 
 const components: {
-  [propName: string]: Component;
+  [propName: string]: Component
 } = {
-  Button
+  Button,
 }
-export const UiComponents =  components
+export const UiComponents = components
 // 全局注册
 export default {
   install: (app: App) => {
-    for (const c in components) {
-      app.component(c, components[c]);
-    }
+    for (const c in components)
+      app.component(c, components[c])
   },
-};
+}
