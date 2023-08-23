@@ -5,5 +5,17 @@
     "source.fixAll.eslint": true,
     "source.organizeImports": false
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml"
+  ],
   "scss.lint.unknownAtRules": "ignore"
 }
