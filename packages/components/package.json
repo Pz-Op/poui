@@ -8,5 +8,10 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "scss": "^0.2.4",
+    "typescript": "~5.1.6",
+    "unocss": "^0.55.2"
   }
 }
