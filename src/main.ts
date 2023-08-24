@@ -2,9 +2,9 @@ import 'virtual:uno.css'
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import UiComponents from 'components/src'
+import poui from 'poui'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(UiComponents)
+app.use(poui)
 app.mount('#app')
