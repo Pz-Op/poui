@@ -15,15 +15,15 @@
   },
   "dependencies": {
     "@iconify-json/mingcute": "^1.1.9",
-    "components": "file:packages\\components",
-    "poui_styles": "file:packages\\styles",
+    "@poui/style": "workspace:*",
+    "poui": "workspace:*",
     "sass": "^1.66.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.40.2",
+    "@antfu/eslint-config": "^0.41.0",
     "@tsconfig/node18": "^18.2.1",
-    "@types/node": "^18.17.8",
+    "@types/node": "^18.17.9",
     "@unocss/eslint-config": "^0.55.2",
     "@unocss/transformer-compile-class": "^0.55.2",
     "@unocss/transformer-directives": "^0.55.2",
