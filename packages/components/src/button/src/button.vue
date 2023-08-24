@@ -1,11 +1,36 @@
-<script setup lang="ts">
-// import Ripple from './../../animations'
+<script setup>
+import { computed, useAttrs } from 'vue'
+
+import Ripple from './../../animations/src/ripple/ripple.vue'
+
+const attrs = useAttrs()
+const type_map = {
+  primary: {
+    class: 'po_button-primary',
+  },
+  outline: {
+    class: 'po_button-outline',
+  },
+  text: {
+    class: 'po_button-text',
+  },
+}
+
+// 计算
+const type = computed(() => {
+  if (attrs.type === undefined)
+    return ''
+  else
+    return type_map[attrs.type].class
+})
 </script>
 
 <template>
-  <button class="po_button">
+  <button class="po_button" :class="type">
     <Ripple />
-    <slot />
+    <div class="text">
+      <slot />
+    </div>
   </button>
 </template>
 
