@@ -10,9 +10,6 @@
 @use './ripple.scss';
 .ripple{
   inset: 0;
-  width: 100%;
-  height: 100%;
-    @apply relative;
 
     &::before{
         @apply absolute top-0 left-0 bg-black;
