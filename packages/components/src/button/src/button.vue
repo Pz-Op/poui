@@ -1,60 +1,32 @@
-<script setup>
-import { computed, useAttrs } from 'vue'
+<script setup lang="ts">
+import { useAttrs } from 'vue'
 
-import Ripple from './../../animations/src/ripple/ripple.vue'
-
-const attrs = useAttrs()
-const type_map = {
-  primary: {
-    class: 'po_button-primary',
-  },
-  outline: {
-    class: 'po_button-outline',
-  },
-  text: {
-    class: 'po_button-text',
-  },
+const bgs = {
+  primary: 'bg-[var(--pri-color-o100)]',
+  default: 'bg-[#eee]',
+  text: 'bg-transparent',
 }
-
-// 计算
-const type = computed(() => {
-  if (attrs.type === undefined)
-    return ''
-  else
-    return type_map[attrs.type].class
-})
+const attrs = useAttrs()
+function getBg() {
+  // 使用三元运算符判断attrs是否存在potype属性，如果存在则返回bgs[attrs.potype as keyof typeof bgs]，否则返回'default'
+  return attrs.potype ? bgs[attrs.potype as keyof typeof bgs] : bgs.default
+}
 </script>
 
 <template>
-  <button class="po_button" :class="type">
-    <Ripple />
-    <div class="text">
-      <slot />
-    </div>
-  </button>
+  <div class="po_button overflow-hidden rounded-2" :class="[getBg()]">
+    <button
+      type="button"
+      v-bind="$attrs"
+      class="relative z-[2] m-0 cursor-pointer border-0 bg-transparent before:(absolute left-0 top-0 z-[-1] h-full w-full bg-transparent transition-colors content-[''] hover:bg-[rgba(0,0,0,0.1)]) disabled:cursor-not-allowed"
+    >
+      <p class="px-6 py-4 font-bold">
+        <slot />
+      </p>
+    </button>
+  </div>
 </template>
 
-<style scoped lang="scss">
-@use 'button.scss';
-.po_button {
-  //基础样式
-  @apply border-none px-6 py-2 rounded-8 text-base font-bold cursor-pointer
-   bg-[var(--pri-color-o20)] text-black;
-
-  //主色
-  &.po_button-primary {
-    @apply bg-[var(--pri-color-o100)] text-white;
-  }
-
-  //描边
-  &.po_button-outline {
-    box-shadow: inset 0 0 0 2px var(--pri-color-o100);
-  }
-
-  //纯文字
-  &.po_button-text,
-  &.po_button-outline {
-    @apply bg-[rgba(0,0,0,0)] text-[var(--pri-color-o100)];
-  }
-}
+<style lang="scss" scoped>
+@use './button.scss'
 </style>

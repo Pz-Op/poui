@@ -3,16 +3,8 @@
 </script>
 
 <template>
-  <div class="ripple" />
+  <div class="ripple absolute left-0 top-0 h-full w-full bg-[rgba(0,0,0,0.2)]" />
 </template>
 
-<style scoped lang="scss">
-@use './ripple.scss';
-.ripple{
-  inset: 0;
-
-    &::before{
-        @apply absolute top-0 left-0 bg-black;
-    }
-}
+<style lang="scss" scoped>
 </style>

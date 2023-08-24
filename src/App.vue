@@ -10,16 +10,16 @@ import TheWelcome from './components/TheWelcome.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
       <div class="mt-4 flex gap-4">
-        <Button type="primary">
+        <Button potype="primary">
+          1255
+        </Button>
+        <Button disabled>
           1255
         </Button>
         <Button>
           1255
         </Button>
-        <Button type="outline">
-          1255
-        </Button>
-        <Button type="text">
+        <Button>
           1255
         </Button>
 
