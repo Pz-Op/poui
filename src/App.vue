@@ -9,21 +9,45 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <div class="mt-4 flex gap-4">
+      <div class="mt-4 flex flex-wrap gap-4">
         <Button potype="primary">
           1255
         </Button>
         <Button disabled>
           1255
         </Button>
-        <Button>
+        <Button>1255</Button>
+        <Button potype="text">
           1255
         </Button>
-        <Button>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-4">
+        <Button size="sm" potype="primary">
           1255
         </Button>
-
-        <Ripple />
+        <Button size="sm" disabled>
+          1255
+        </Button>
+        <Button size="sm">
+          1255
+        </Button>
+        <Button size="sm" potype="text">
+          1255
+        </Button>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-4">
+        <Button size="lg" potype="primary">
+          1255
+        </Button>
+        <Button size="lg" disabled>
+          1255
+        </Button>
+        <Button size="lg">
+          1255
+        </Button>
+        <Button size="lg" potype="text">
+          1255
+        </Button>
       </div>
     </div>
   </header>
