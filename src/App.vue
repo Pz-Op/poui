@@ -4,7 +4,7 @@ import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
-  <header>
+  <header class="bg-[var(--md-sys-color-background)]">
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125">
 
     <div class="wrapper">
@@ -18,6 +18,9 @@ import TheWelcome from './components/TheWelcome.vue'
         </Button>
         <Button>1255</Button>
         <Button potype="text">
+          1255
+        </Button>
+        <Button potype="outline">
           1255
         </Button>
       </div>
@@ -34,6 +37,9 @@ import TheWelcome from './components/TheWelcome.vue'
         <Button size="sm" potype="text">
           1255
         </Button>
+        <Button size="sm" potype="outline">
+          1255
+        </Button>
       </div>
       <div class="mt-4 flex flex-wrap gap-4">
         <Button size="lg" potype="primary">
@@ -46,6 +52,9 @@ import TheWelcome from './components/TheWelcome.vue'
           1255
         </Button>
         <Button size="lg" potype="text">
+          1255
+        </Button>
+        <Button size="lg" potype="outline">
           1255
         </Button>
       </div>
