@@ -16,7 +16,7 @@ import TheWelcome from './components/TheWelcome.vue'
         <Button disabled>
           1255
         </Button>
-        <Button>
+        <Button potype="text">
           1255
         </Button>
         <Button>
